@@ -37,15 +37,27 @@ The data consisted of 8523 rows, and 12 columns as listed in the data dictionary
 
 ### Results
 
+
+
 ### Model
+The final model used was a Decision Tree trained on 75% of the data. I recommend using the Decision Tree model over a Logistic Regression model. Both had similar r^2 scores, however the Decision tree had a lower RMSE score, indicating that it would not make many bigger mistakes, but instead more smaller mistakes. A table follows:
+
+|           | Decision Tree       | Linear Regression   |   |   |
+|-----------|---------------------|---------------------|---|---|
+| Test r^2  | 0.38335523332222055 | 0.38335523332222055 |   |   |
+| Test RMSE | 1055.6851402178304  | 1304.3423269636032  |   |   |
+|           |                     |                     |   |   |
+
+While both models would explain 38.3% of the variation within them, the decision tree has a lower RMSE than the Linear Regression. 
 
 ### Recommendations
 
 The storeowner should focus on the last and most correlatable factors that impact food sales, specifically whether to stock items with higher_MSRP.
 
 ### Limitations & Next Steps
-More EDA should be run on this data set in order to provide graphs that are more pleasing to the eye, as well as providing more visuals to choose from, and prove/disprove the usefulness of various columns as features within the test/train set.
+* More EDA should be run on this data set in order to provide graphs that are more pleasing to the eye, as well as providing more visuals to choose from, and prove/disprove the usefulness of various columns as features within the test/train set. 
 
+* More regression trees and supervised learning algorithms shoul be tested out as well to see if what I have is the most optimal for this situation.
 ### For further information
 
 Please send me an email @ jplim96@gmail.com. 
