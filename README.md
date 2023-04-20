@@ -64,10 +64,7 @@ The storeowner should focus on the last and most correlatable factors that impac
 ### Limitations & Next Steps
 * More EDA should be run on this data set in order to provide graphs that are more pleasing to the eye, as well as providing more visuals to choose from, and prove/disprove the usefulness of various columns as features within the test/train set. 
 
-* More regression trees and supervised learning algorithms shoul be tested out as well to see if what I have is the most optimal for this situation.
+* More regression trees and supervised learning algorithms should be tested out as well to see if what I have is the most optimal for this situation.
 ### For further information
 
 Please send me an email @ jplim96@gmail.com. 
-
-### Overall time worked:
-Approximately 10 hours of work went into this project. The project was started on 12/14/2022, and was finished on 2/3/2023. Roughly one hour per week was put into the project.
