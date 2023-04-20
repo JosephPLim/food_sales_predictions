@@ -62,12 +62,9 @@ While both models would explain 38.3% of the variation within them, the decision
 The storeowner should focus on the last and most correlatable factors that impact food sales, specifically whether to stock items with higher_MSRP.
 
 ### Limitations & Next Steps
-* More EDA should be run on this data set in order to provide graphs that are more pleasing to the eye, as well as providing more visuals to choose from, and prove/disprove the usefulness of various columns as features within the test/train set. 
+* A better TensorFlow model should be implemented.
 
-* More regression trees and supervised learning algorithms shoul be tested out as well to see if what I have is the most optimal for this situation.
+* Hypothesis Testing should be implemented to determine which features have statistically significant values.
 ### For further information
 
 Please send me an email @ jplim96@gmail.com. 
-
-### Overall time worked:
-Approximately 10 hours of work went into this project. The project was started on 12/14/2022, and was finished on 2/3/2023. Roughly one hour per week was put into the project.
