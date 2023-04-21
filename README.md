@@ -63,6 +63,12 @@ Every Item Identifier above correlates to a single, one hot encoded item. They s
 However, for the decision tree, the top five coefficients were instead more broad, focusing on the Item's MRP, Outlet Types, and Outlet IDs to provide estimates.
 ![sample image](DecTree5MIF.png)
 
+When compared to a SHAP plot, all of the coefficients matched.
+![sample image](SHAPSummaryBar.png)
+
+From the dot plot, we can see that there was not much major influence by these factors on the price however.
+![sample image](SHAPSummaryDot.png)
+
 
 
 While both models would explain 38.3% of the variation within them, the decision tree has a lower RMSE than the Linear Regression. 
