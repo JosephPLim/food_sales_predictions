@@ -84,11 +84,10 @@ The storeowner should focus on the last and most correlatable factors that impac
 ### Limitations & Next Steps
 * A better TensorFlow model should be implemented.
 
-<<<<<<< HEAD
 * Hypothesis Testing should be implemented to determine which features have statistically significant values.
-=======
+
 * More regression trees and supervised learning algorithms should be tested out as well to see if what I have is the most optimal for this situation.
->>>>>>> 81c77e0bec75709457bb2973a05d4e0772a939f3
+
 ### For further information
 
 Please send me an email @ jplim96@gmail.com. 
