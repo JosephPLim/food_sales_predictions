@@ -56,17 +56,21 @@ The final model used was a Decision Tree trained on 75% of the data. I recommend
 |           |                     |                     |
 
 For the linear regression, the top three coefficients that factored into sales were centered around whether an item was one of three:
+
 ![sample image](LineReg3MIF.png)
 
 Every Item Identifier above correlates to a single, one hot encoded item. They signify a change in X dollars (where X is the coefficient) depending on the item. For example, if an item is FDU55, then it will be 6640.594 monetary units to start with.
 
 However, for the decision tree, the top five coefficients were instead more broad, focusing on the Item's MRP, Outlet Types, and Outlet IDs to provide estimates.
+
 ![sample image](DecTree5MIF.png)
 
 When compared to a SHAP plot, all of the coefficients matched.
+
 ![sample image](SHAPSummaryBar.png)
 
 From the dot plot, we can see that there was not much major influence by these factors on the price however.
+
 ![sample image](SHAPSummaryDot.png)
 
 
