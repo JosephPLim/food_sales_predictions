@@ -73,6 +73,25 @@ From the dot plot, we can see that there was not much major influence by these f
 
 ![sample image](SHAPSummaryDot.png)
 
+Force plots and LIME tabular explanations were utilized in order to better visualize factors affecting pricing.Due to their importance, examples from Outlet 27 and Outlet 18 were analyzed.
+
+![sample image]('SHAPForce27.png')
+
+We can see that for this example from Outlet 27, that many features pushed the predicted price downwards, including the item's MRP, the fact that that specific item wasn't sold in a Type 1 Supermarket, and that the item did not come from Outlet 18.
+Only one feature pushed the predicted price upwards, which was that the item came from Outlet 27.
+
+![sample imag](LIME27.png)
+
+From the LIME tabular explanation, we can see that the most important features that impacted predictions were if the Item MP was less than 98.82 (negative), if the item came from a Type 1 Supermarket (negative), and if it was one of the top 3 selling items.
+
+![sample image]('SHAPForce18.png')
+
+We can see that for this example from Outlet 18, that many features pushed the predicted price downwards, including the item's MRP, the fact that that specific item wasn't sold in a Type 1 Supermarket, and that the item did not come from Outlet 27.
+Only a few features pushed the predicted price upwards, which was that the item came from Outlet 18, and that the store the item was sold in, was established in 2009.
+
+![sample imag](LIME18.png)
+
+From the LIME tabular explanation, we can see that the most important features that impacted predictions were if the Item MP was less than 98.82 (negative), if the item came from a Type 1 Supermarket (negative), and if it was one of the top 3 selling items.
 
 
 While both models would explain 38.3% of the variation within them, the decision tree has a lower RMSE than the Linear Regression. 
