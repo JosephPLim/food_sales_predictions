@@ -38,7 +38,7 @@ The data consisted of 8523 rows, and 12 columns as listed in the data dictionary
 ### Results
 
 #### Low Fat vs. Regular Fat Item Sales
-![sample image](images/LFvsRegularSales.png)
+![sample image]("images/LFvsRegularSales.png")
 
 > Utilizing a bar chart, we can see that the overall sales of Low Fat items is greater than the overall sales of Regular Fat items.
 
