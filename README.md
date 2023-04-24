@@ -55,44 +55,49 @@ The final model used was a Decision Tree trained on 75% of the data. I recommend
 | Test RMSE | 1055.6851402178304  | 1304.3423269636032  |
 |           |                     |                     |
 
-For the linear regression, the top three coefficients that factored into sales were centered around whether an item was one of three:
+For the linear regression, the top three coefficients that factored into sales were centered around which type of supermarket the item was sold in:
 
 ![sample image](images/LineReg3MIF.png)
 
-Every Item Identifier above correlates to a single, one hot encoded item. They signify a change in X dollars (where X is the coefficient) depending on the item. For example, if an item is FDU55, then it will be 6640.594 monetary units to start with.
+All feature names correlate to a single, one hot encoded outlet type. They signify a change in X dollars (where X is the coefficient) depending on the outlet type. For example, if an outlet is a Type 1 Supermarket, then it will be 1873.908 monetary units to start with.
 
-However, for the decision tree, the top five coefficients were instead more broad, focusing on the Item's MRP, Outlet Types, and Outlet IDs to provide estimates.
+For the decision tree, the top five coefficients were focused on not just the supermarket type, but also the Item's MRP and item visibility to provide estimates.
 
 ![sample image](images/DecTree5MIF.png)
 
-When compared to a SHAP plot, all of the coefficients matched.
+When compared to a SHAP plot, the top four coefficients matched (Item MRP and supermarket type), but the 5th most important coefficients apears to vary.
 
 ![sample image](images/SHAPSummaryBar.png)
 
-From the dot plot, we can see that there was not much major influence by these factors on the price however.
+From the dot plot, we can see that there was some influence by these factors on the price.
 
 ![sample image](images/SHAPSummaryDot.png)
 
 Force plots and LIME tabular explanations were utilized in order to better visualize factors affecting pricing.Due to their importance, examples from Outlet 27 and Outlet 18 were analyzed.
 
-![sample image](images/SHAPForce27.png)
+![sample image](images/SHAPForceType1.png)
 
-We can see that for this example from Outlet 27, that many features pushed the predicted price downwards, including the item's MRP, the fact that that specific item wasn't sold in a Type 1 Supermarket, and that the item did not come from Outlet 18.
-Only one feature pushed the predicted price upwards, which was that the item came from Outlet 27.
+We can see that for this example from Type 1 Supermarkets, that the features that pushed the price downwards were the lack of the item being sold in Type 2 and 3 supermarkets, in addition to the item's MRP. The only feature that visibly pushed the predicted price upwards was that the item came from a Type 1 supermarket.
 
-![sample imag](images/LIME27.png)
+![sample imag](images/LIMEType1.png)
 
-From the LIME tabular explanation, we can see that the most important features that impacted predictions were if the Item MP was less than 98.82 (negative), if the item came from a Type 1 Supermarket (negative), and if it was one of the top 3 selling items.
+From the LIME tabular explanation, we can see that the most important features that impacted predictions were if the Item MRP was less than 98.82 (negative), if the item came from a Type 3 Supermarket (negative), and if the item came from a Type 1 Supermarket (positive).
 
-![sample image](images/SHAPForce18.png)
+![sample image](images/SHAPForceType2.png)
 
-We can see that for this example from Outlet 18, that many features pushed the predicted price downwards, including the item's MRP, the fact that that specific item wasn't sold in a Type 1 Supermarket, and that the item did not come from Outlet 27.
-Only a few features pushed the predicted price upwards, which was that the item came from Outlet 18, and that the store the item was sold in, was established in 2009.
+We can see that for this example from Type 2 Supermarkets, that the features that pushed the price downwards were the lack of the item being sold in Type 1 and 3 supermarkets, as well as the item's MRP. The only feature that visibly pushed the predictd price upwards was that the item came from a Type 2 supermarket.
 
-![sample imag](images/LIME18.png)
+![sample imag](images/LIMEType2.png)
 
-From the LIME tabular explanation, we can see that the most important features that impacted predictions were if the Item MP was less than 98.82 (negative), if the item came from a Type 1 Supermarket (negative), and if it was one of the top 3 selling items.
+From the LIME tabular explanation, we can see that the most important features that impacted predictions were if the Item MRP was less than 98.82 (negative), if the item came from a Type 3 or Type 1 Supermarket (both negative), and if the item came from a Type 2 Supermarket (positive).
 
+![sample image](images/SHAPForceType3.png)
+
+We can see that for this example from Type 3 Supermarkets, that the features that pushed the price downwards were the lack of the item being sold in Type 1 and 2 supermarkets. The features that visibly pushed the predicted price upwards were the item coming from a Type 3 supermarket, and the item's MRP.
+
+![sample imag](images/LIMEType3.png)
+
+From the LIME tabular explanation, we can see that the most important features that impacted predictions were if the Item MRP was greater than 144.03 (positive), if the item came from a Type 1 or Type 2 Supermarket (both negative), if the item came from a Type 3 Supermarket (positive), and if the item was seafood (negative).
 
 While both models would explain 38.3% of the variation within them, the decision tree has a lower RMSE than the Linear Regression. 
 
