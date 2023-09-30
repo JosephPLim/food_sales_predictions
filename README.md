@@ -1,5 +1,7 @@
 # Food Sales Predictions
 
+# NOTE: Project is currently being overhauled as of 9/29.
+
 ## An analysis of how certain factors within a relatively large grocery conglomerate affected the sales of different food items.
 
 ## Author: Joseph Lim
